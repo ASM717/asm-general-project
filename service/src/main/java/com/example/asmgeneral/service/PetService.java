@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class PerService {
+public class PetService {
 
     private final PetRepository petRepository;
 

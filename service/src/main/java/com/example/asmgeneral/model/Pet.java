@@ -13,4 +13,10 @@ import javax.persistence.Entity;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Pet {
 
+    String id;
+
+    String color;
+
+    String name;
+
 }
