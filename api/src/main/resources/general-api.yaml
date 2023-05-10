@@ -1,0 +1,44 @@
+openapi: 3.0.3
+info:
+  title: Swagger Petstore - OpenAPI 3.0
+  description: "Описание"
+  version: 1.0.11
+
+paths:
+  /pets/{petId}:
+    get:
+      operationId: getPet
+      description: "Получение питомца"
+      parameters:
+        - in: path
+          name: petId
+          required: true
+          schema:
+            type: string
+      responses:
+        default:
+          description: "Успешное получение данных о питомце"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PetDto'
+
+components:
+  schemas:
+    PetDto:
+      description: "Ответ по запросу"
+      type: object
+      required:
+        - id
+        - color
+        - name
+      properties:
+        id:
+          description: "Id питомца"
+          type: string
+        color:
+          description: "Цвет питомца"
+          type: string
+        name:
+          description: "Имя питомца"
+          type: string
