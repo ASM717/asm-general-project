@@ -11,7 +11,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PetService {
 
-    private final PetRepository petRepository;
+    private PetRepository petRepository;
 
     public Optional<Pet> getPet(String id) {
         return petRepository.findById(id);

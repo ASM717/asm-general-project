@@ -15,8 +15,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PetsController implements PetsApi {
 
-    private final PetService petService;
-    private final PetMapper petMapper;
+    private PetService petService;
+    private PetMapper petMapper;
     @Override
     public ResponseEntity<PetDto> getPet(String petId) {
 
